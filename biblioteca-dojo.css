@@ -1,0 +1,217 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Clase fixed-width container que se "autocentrará" a sí misma */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*Botones favortios*/ 
+/*Border radius hace que tenga curvatura- este no es redondo completamente (si sí se quisiera, sería con width y heigth fijos y radius 50%)*/ 
+/*Agregar más adelante los REM y no PX, se usaron en la pagina de perfil anterior */
+#buscador{
+    background-color: whitesmoke;
+    color: darkcyan;
+    border: solid darkcyan 2px;
+    border-radius: 25px;
+    padding: 8px 60px;
+    font-weight: bold;
+    font-size: 1em; 
+    margin: 10px;
+}
+/*Boton circular: si fijamos las medidas del boton pero se encuentra dentro de un display: flex; se debe agregar un div alrededor del botón, para que este no pierda proporciones de manera responsiva = preguntar a futuro como se podria hacer sin div??? */
+#mas{
+    background-color: turquoise;
+    width: 1.7em;
+    height: 1.7em;
+    border-radius: 50%;
+    color: white;
+    font-size: 2em;
+    border: none;
+    margin: 10px;
+}
+/*En este boton, es importante la propiedad box-shadow, en este ejercicio se uso solo desplazamiento, hay más propiedades como difuminación, doble sombra*/
+/*La sombra se puede ubicar con coordenadas x,y segun el botón. Me gusta esta propiedad muy similar a lo que se utiliza en FIGMA*/
+#cuenta{
+    background-color: royalblue;
+    color: white;
+    font-size: 1.2em;
+    border: solid 2px black;
+    padding: 8px 40px;
+    box-shadow: 4px 4px black;
+    margin: 10px;
+}
+/*Columnas flexibles*/
+/*De mis ejercicios favoritos, revisar el desafio completo, quedo responsivo ya que se comenzo a aplicar medidas en rems*/
+.row{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+.col-2{
+    flex: 2;
+}
+.col-3{
+    flex: 3;
+}
+.rosa{
+    background-color: lightpink;
+    margin: 1rem;
+    height: 10rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lila{
+    background-color: lavender;
+    margin: 1rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Navbar*/
+/*Es mejor el navbare que usé en el pag de perfil- lo dejaré más abajo*/
+/*En este ejemplo hay que tener cuidado ya que el nav lo puse dentro de un header, el cual tenia propiedades*/
+header{
+    color: white;
+    background-color: #2A2A2A;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+}
+.nav-title h1{
+    font-weight: 700;
+    font-size: 2rem;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+.nav li{
+    list-style-type: none;
+    margin-inline: 40px;    
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.btn{
+    background-color: LightSeaGreen;
+    border: solid 2px black;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px;
+    box-shadow: 6px 6px black;
+}
+/*Navbar pag de perfil - me gusta más porque queda centrado, tambiés es resposivo hasta cierto punto */
+/*Barra de navegación*/
+header{
+    background-color: black;
+    color: white;
+    padding-inline: 10%;
+    padding-block: 1%;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+}
+.logoPerfil{
+    flex:1
+}
+.logoPerfil h1{
+    font-size: 2.5rem;
+}
+.contenidoNav{
+    flex:5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenidoNav ul{
+    display: flex;
+}
+.contenidoNav ul li{
+    list-style-type: none;
+    margin-right: 2rem;
+}
+.contenidoNav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+.contenidoNav ul li a.activo{
+    font-weight: 700;
+}
+.contenidoNav button{
+    background-color: lightseagreen;
+    color: white;
+    font-size: 1.4rem;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+}
+/*Tarjeta de usuario*/
+/*Hice al rededor de tres tarjetas de usuario, esta fue la que mejor me quedo, debe ser porque es el tercer intento jaja*/
+#tarjeta-usario{
+    border: solid 2px lightgrey;
+    border-radius: 0.5rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+.celeste{
+    height: 2.5rem;
+    background-color: lightseagreen;
+    padding: 2rem;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+.celeste img{
+    height: 8rem;
+}
+.gris{
+    background-color: whitesmoke;
+    padding: 4rem 2rem 1rem 2rem;
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+}
+.gris h2{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.ubicacion{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.ubicacion img{
+    height: 1.3rem;
+    margin-right: 0.5rem;
+}
+.ubicacion p{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.informacion p{
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+.configuracion a{
+    color: #2B78E4;
+    font-weight: 500;
+}
+.configuracion a:hover{
+    font-weight: 600;
+}
